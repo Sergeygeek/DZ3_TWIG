@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery</title>
+</head>
+<body>
+    <h2>Галлерея</h2>
+    <div class="container">
+        <div class="gallery">
+            {% for image in images %}
+            <!--По ссылке передаем id картинки-->
+            <a href="image.php?id={{ image.id }}">
+                <img src="{{ image.src }}" alt="{{ image.name }}">
+            </a>
+            {% endfor %}
+        </div>
+        <form action="server.php" method="post" enctype="multipart/form-data">
+        <p>
+            <label>Загрузить файл:</label>
+            <input type="file" name="userfile">
+        </p>
+        <button type="submit" name="send">Загрузить</button>
+    </form>
+    </div>
+    
+</body>
+</html>

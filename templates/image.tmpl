@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IMAGE</title>
+</head>
+<body>
+    <a href="index.php"> Вернуться в галерею </a>
+  <div>
+   <!--Передаем в качестве гет параметра название фото, так как они у нас одинаковые в обеих папках, то работает большое фото-->
+    <img src="{{ image.big_img_src }}">
+    <p>Количество просмотров: <span>{{ views.views }}</span></p>
+  </div>
+</body>
+</html>
